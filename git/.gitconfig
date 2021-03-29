@@ -1,0 +1,24 @@
+[user]
+	name = Kevin Beam
+	email = kbeam@nsidc.org
+[color]
+	ui = auto
+[apply]
+	whitespace = nowarn
+[core]
+	autocrlf = input
+	safecrlf = false
+[alias]
+        st = status
+        sts = status --short
+        hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+[push]
+	default = upstream
+        followTags = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[credential]
+	helper = store
