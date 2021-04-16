@@ -98,6 +98,15 @@ else
 lua << EOF
 local lspconfig = require'lspconfig'
 
+-- Fortran language server
+lspconfig.fortls.setup{}
+
+-- JavaScript / TypeScript language server
+lspconfig.tsserver.setup{
+  cmd = { "npx", "typescript-language-server", "--stdio" },
+}
+
+-- Python language server
 lspconfig.pyls.setup{
   settings = {
     pyls = {
@@ -114,8 +123,6 @@ lspconfig.pyls.setup{
     }
   }
 }
-
-lspconfig.fortls.setup{}
 EOF
 
 " LSP config (the mappings used in the default file don't quite work right)
