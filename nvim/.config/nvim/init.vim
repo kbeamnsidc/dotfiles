@@ -71,7 +71,7 @@ else
   nnoremap <Leader>x :<C-u>nohlsearch<CR>
 
   " FZF
-  nnoremap <C-p> :<C-u>FZF<CR>
+  nnoremap <Leader>f :FZF<CR>
   nnoremap <Leader><Leader> :Files<cr>
   nmap <leader><tab> <plug>(fzf-maps-n)
 
