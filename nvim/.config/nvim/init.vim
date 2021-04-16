@@ -60,6 +60,7 @@ else
   set termguicolors
 
   " Enable Python extensions
+  " The `py3nvim` virtual environment contains the `pynvim` package
   let g:python3_host_prog = '~/.pyenv/versions/py3nvim/bin/python'
 
   " Theme
