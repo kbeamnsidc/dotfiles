@@ -81,6 +81,7 @@ PATH=$PATH:~/.local/bin
 
 export VISUAL="nvim"
 alias vim=nvim
+alias fd=fdfind
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -89,10 +90,13 @@ export GIT_INTERNAL_GETTEXT_TEST_FALLBACKS=1
 
 export DISABLE_AUTO_TITLE='true'
 
+# Customize 'bat'
+export BAG_THEME="TwoDark"
+
 # ---------------------------
 # Go
 # ---------------------------
-PATH=$PATH:/usr/local/go/bin
+PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 
 # ---------------------------
 # JavaScript

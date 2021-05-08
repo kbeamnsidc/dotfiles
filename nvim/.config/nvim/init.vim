@@ -71,9 +71,14 @@ else
   nnoremap <Leader>x :<C-u>nohlsearch<CR>
 
   " FZF
-  nnoremap <Leader>f :FZF<CR>
-  nnoremap <Leader><Leader> :Files<cr>
-  nmap <leader><tab> <plug>(fzf-maps-n)
+  nnoremap <Leader>fb :Buffers<CR>
+  nnoremap <Leader>ff :Files<CR>
+  nnoremap <Leader>fg :Commits<CR>
+  nnoremap <Leader>fr :Rg<CR>
+  nnoremap <Leader>ft :Tags<CR>
+  let g:fzf_tags_command = 'ctags -R'
+  let g:fzf_buffers_jump = 1
+  let g:fzf_tags_command = 'ctags -R'
 
   " NERDTree
   map <Leader>n :NERDTreeToggle<CR>
