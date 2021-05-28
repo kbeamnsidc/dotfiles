@@ -4,6 +4,10 @@ local lspconfig = require'lspconfig'
 
 lspconfig.fortls.setup{}
 
+lspconfig.tsserver.setup{
+  cmd = { "npx", "typescript-language-server", "--stdio" }
+}
+
 lspconfig.julials.setup{}
 
 lspconfig.pyls.setup{
