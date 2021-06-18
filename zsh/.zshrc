@@ -155,11 +155,6 @@ PATH="$PATH:$HOME/.rvm/bin"
 PATH="$HOME/.cargo/bin:$PATH"
 
 # ---------------------------
-# Kubernetes completion
-# ---------------------------
-source <(kubectl completion zsh)
-
-# ---------------------------
 # PulseSecure VPN Client
 # ---------------------------
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/pulse
