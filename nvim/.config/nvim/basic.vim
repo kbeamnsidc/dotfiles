@@ -90,8 +90,8 @@ nnoremap <Left> <NOP>
 nnoremap <Right> <NOP>
 
 " Enable Python & Node extensions
-let g:python3_host_prog = expand('~/.pyenv/versions/py3nvim/bin/python')
-let g:node_host_prog = expand("~/.nvm/versions/node/v12.18.3/bin/node")
+let g:python3_host_prog = expand('~/.pyenv/versions/pynvim/bin/python')
+let g:node_host_prog = expand("~/.nvm/versions/node/v14.16.0/bin/node")
 
 " Theme
 colorscheme apprentice
