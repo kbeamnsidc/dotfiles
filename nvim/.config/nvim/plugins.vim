@@ -17,11 +17,9 @@ Plug 'mg979/vim-visual-multi'
 Plug 'liuchengxu/vim-which-key'
 Plug 'lervag/vimtex'
 
-" Development tools
+" Git tools
 Plug 'junegunn/gv.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'vim-test/vim-test'
-Plug 'puremourning/vimspector'
 
 " Languages
 Plug 'pangloss/vim-javascript'
@@ -30,8 +28,21 @@ Plug 'rudrab/vimf90'
 Plug 'rust-lang/rust.vim'
 Plug 'leafgarland/typescript-vim'
 
+" Testing tools
+Plug 'vim-test/vim-test'
+Plug 'rcarriga/vim-ultest', { 'do': ':UpdateRemotePlugins' }
+
+" Debugger
+" Plug 'puremourning/vimspector'
+
 " LSP
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
+
+" DAP
+Plug 'mfussenegger/nvim-dap'
+Plug 'Pocco81/DAPInstall'
+" Plug 'mfussenegger/nvim-dap-python'
+Plug 'rcarriga/nvim-dap-ui'
 
 call plug#end()
