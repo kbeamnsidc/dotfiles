@@ -13,7 +13,7 @@
         sts = status --short
         hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 [push]
-	default = upstream
+	default = current
         followTags = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
