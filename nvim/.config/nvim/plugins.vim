@@ -20,6 +20,7 @@ Plug 'lervag/vimtex'
 " Git tools
 Plug 'junegunn/gv.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'mattn/vim-gist'
 
 " Languages
 Plug 'pangloss/vim-javascript'
