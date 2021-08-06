@@ -88,10 +88,15 @@ source $ZSH/oh-my-zsh.sh
 # ---------------------------
 PATH=$PATH:~/.local/bin
 
+# Shell in vi-mode
+bindkey -v
 export VISUAL="nvim"
+
+# Aliases
 alias vim=nvim
 alias fd=fdfind
 
+# Setup FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Workaround for git / pyenv conflict
@@ -101,6 +106,9 @@ export DISABLE_AUTO_TITLE='true'
 
 # Customize 'bat'
 export BAG_THEME="TwoDark"
+
+# Setup tmuxp
+eval "$(_TMUXP_COMPLETE=source_zsh tmuxp)"
 
 # ---------------------------
 # Go
@@ -138,7 +146,7 @@ load-nvmrc
 # ---------------------------
 # Julia
 # ---------------------------
-PATH="$HOME/tools/julia/julia-1.6.0/bin:$PATH"
+PATH="$HOME/tools/julia/julia-1.6.2/bin:$PATH"
 
 # ---------------------------
 # Python
