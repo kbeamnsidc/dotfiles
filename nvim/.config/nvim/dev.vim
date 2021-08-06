@@ -6,8 +6,14 @@ set conceallevel=1
 
 " vim-test
 let test#strategy = "neovim"
-nmap <silent> <Leader>t<C-n> :TestNearest<CR>
-nmap <silent> <Leader>t<C-f> :TestFile<CR>
-nmap <silent> <Leader>t<C-s> :TestSuite<CR>
-nmap <silent> <Leader>t<C-l> :TestLast<CR>
-nmap <silent> <Leader>t<C-g> :TestVisit<CR>
+let test#python#pytest#options = "--color=yes"
+let test#javascript#jest#options = "--color=always"
+nmap <silent> <Leader>tn :TestNearest<CR>
+nmap <silent> <Leader>tf :TestFile<CR>
+nmap <silent> <Leader>ts :TestSuite<CR>
+nmap <silent> <Leader>tl :TestLast<CR>
+nmap <silent> <Leader>tg :TestVisit<CR>
+nmap <silent> <Leader>un <Plug>(ultest-run-nearest)
+nmap <silent> <Leader>uf <Plug>(ultest-run-file)
+nmap <silent> <Leader>us <Plug>(ultest-summary-jump)
+nmap <silent> <Leader>ut <Plug>(ultest-summary-toggle)
