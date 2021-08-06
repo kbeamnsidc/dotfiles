@@ -5,6 +5,9 @@ let mapleader=','
 " Cursor setup
 set guicursor=n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20,a:blinkon2,a:blinkoff1
 
+" Allows project-specific .vimlocal files
+silent! so .vimlocal
+
 " Sane defaults
 filetype plugin indent on
 syntax enable                           " Enables syntax highlighing
