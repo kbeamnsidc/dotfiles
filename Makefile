@@ -1,6 +1,6 @@
 all:
-	stow -t $(HOME) emacs
-	stow -t $(HOME) git
-	stow -t $(HOME) nvim
-	stow -t $(HOME) tmux
-	stow -t $(HOME) zsh
+	stow --dotfiles -t $(HOME) emacs
+	stow --dotfiles -t $(HOME) git
+	stow --dotfiles -t $(HOME) nvim
+	stow --dotfiles -t $(HOME) tmux
+	stow --dotfiles -t $(HOME) zsh
