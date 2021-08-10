@@ -20,6 +20,7 @@
   (setq company-tooltip-align-annotations t)
   (global-set-key (kbd "<C-tab>") 'company-complete))
 
+;; https://github.com/bbatsov/crux
 (use-package crux
   :ensure t
   :bind (("M-p" . crux-smart-open-line-above)

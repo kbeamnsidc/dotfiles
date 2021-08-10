@@ -5,6 +5,8 @@
 ;; ----------------------------------------------------------
 ;; LSP - lsp-mode
 ;; ----------------------------------------------------------
+;; https://emacs-lsp.github.io/lsp-mode/
+;; https://github.com/emacs-lsp/lsp-mode
 (use-package lsp-mode
   :ensure t
   :hook ((python-mode . lsp)
@@ -25,6 +27,8 @@
    lsp-pyls-plugins-pyflakes-enabled nil))
 (setq lsp-keymap-prefix "C-c l")
 
+;; https://emacs-lsp.github.io/lsp-ui/
+;; https://github.com/emacs-lsp/lsp-ui
 (use-package lsp-ui
   :ensure t
   :commands lsp-ui-mode
