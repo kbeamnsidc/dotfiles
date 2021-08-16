@@ -23,6 +23,7 @@
 (require 'basics)
 (require 'packages)
 (require 'dev)
+(require 'lsp-lm)
 
 (setq gc-cons-threshold (* 32 1024 1024))
 

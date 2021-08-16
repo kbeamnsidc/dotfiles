@@ -65,6 +65,14 @@
   :config
   (load-theme 'doom-tomorrow-night t))
 
+;; https://github.com/purcell/exec-path-from-shell
+(use-package exec-path-from-shell
+  :ensure t
+  :pin melpa-stable
+  :defer t
+  :config
+  (exec-path-from-shell-initialize))
+
 ;; http://www.flycheck.org/en/latest/
 (use-package flycheck
   :ensure t)
@@ -108,7 +116,11 @@
 (use-package markdown-mode
   :ensure t
   :pin melpa
-  :mode "\\.md\\'")
+  :commands (markdown-mode gfm-mode)
+  :mode (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode))
+  :init (setq markdown-command "pandoc"))
 
 ;; TODO: org, org-babel, org-restclient
 
