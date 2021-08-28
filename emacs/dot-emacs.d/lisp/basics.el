@@ -61,6 +61,20 @@
 (use-package no-littering
   :ensure t)
 
+(setq bookmark-default-file "~/.emacs.d/var/bookmarks")
+(setq bookmark-save-flag 1)
+
+(use-package dashboard
+  :ensure t
+  :config
+  (dashboard-setup-startup-hook)
+  (setq dashboard-set-init-info t)
+  (setq dashboard-items '((recents  . 5)
+                        (bookmarks . 5)
+                        (projects . 5)
+                        (agenda . 5)
+                        (registers . 5))))
+
 (provide 'basics)
 
 ;;; basics.el ends here
