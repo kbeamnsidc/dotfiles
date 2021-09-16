@@ -33,6 +33,8 @@
   ("C-c r" . deadgrep))
 
 ;; https://github.com/purcell/default-text-scale
+;; C-M-= Increase
+;; C-M-- Decrease
 (use-package default-text-scale
   :ensure t
   :config (default-text-scale-mode))
