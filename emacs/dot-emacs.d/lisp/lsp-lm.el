@@ -14,6 +14,7 @@
          (typescript-mode . lsp)
          (fortran-mode . lsp)
          (f90-mode . lsp)
+         (terraform-mode . lsp)
          (lsp-mode . lsp-enable-which-key-integration))
   :commands lsp
   :config
@@ -26,7 +27,13 @@
    lsp-pyls-plugins-flake8-enabled t
    lsp-pyls-plugins-pycodestyle-enabled nil
    lsp-pyls-plugins-pyflakes-enabled nil))
+
 (setq lsp-keymap-prefix "C-c l")
+
+(lsp-register-client
+ (make-lsp-client :new-connection (lsp-stdio-connection '("/usr/bin/terraform-ls" "serve"))
+                  :major-modes '(terraform-mode)
+                  :server-id 'terraform-ls))
 
 ;; https://emacs-lsp.github.io/lsp-ui/
 ;; https://github.com/emacs-lsp/lsp-ui
