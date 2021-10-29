@@ -43,7 +43,7 @@ Plug 'hrsh7th/nvim-compe'
 " DAP
 Plug 'mfussenegger/nvim-dap'
 Plug 'Pocco81/DAPInstall'
-" Plug 'mfussenegger/nvim-dap-python'
 Plug 'rcarriga/nvim-dap-ui'
+Plug 'mfussenegger/nvim-dap-python'
 
 call plug#end()

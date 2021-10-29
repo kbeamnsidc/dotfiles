@@ -38,3 +38,5 @@
     path = ~/tools/delta/themes.gitconfig
 [delta]
    features = eigenbeam
+[init]
+	defaultBranch = main

@@ -22,18 +22,18 @@
    read-process-output-max (* 1024 1024)
    lsp-idle-delay 0.500
    lsp-clients-typescript-tls-path "npx typescript-language-server"
+   lsp-keymap-prefix "C-c l"
    lsp-pyls-plugins-pydocstyle-enabled t
    lsp-pyls-plugins-yapf-enabled t
    lsp-pyls-plugins-flake8-enabled t
    lsp-pyls-plugins-pycodestyle-enabled nil
-   lsp-pyls-plugins-pyflakes-enabled nil))
+   lsp-pyls-plugins-pyflakes-enabled nil)
+  (lsp-register-client
+   (make-lsp-client :new-connection (lsp-stdio-connection '("/usr/bin/terraform-ls" "serve"))
+                    :major-modes '(terraform-mode)
+                    :server-id 'terraform-ls)))
 
-(setq lsp-keymap-prefix "C-c l")
 
-(lsp-register-client
- (make-lsp-client :new-connection (lsp-stdio-connection '("/usr/bin/terraform-ls" "serve"))
-                  :major-modes '(terraform-mode)
-                  :server-id 'terraform-ls))
 
 ;; https://emacs-lsp.github.io/lsp-ui/
 ;; https://github.com/emacs-lsp/lsp-ui
