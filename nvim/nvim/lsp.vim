@@ -38,6 +38,17 @@ lspconfig.julials.setup{}
 --]]
 lspconfig.pylsp.setup{}
 
+--[[
+  Terraform
+    # Add the HashiCorp GPG key
+    curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+    # Add the official HashiCorp Linux repository
+    sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+    sudo apt-get update && sudo apt-get install terraform-ls
+  https://github.com/hashicorp/terraform-ls
+--]]
+lspconfig.terraformls.setup{}
+
 EOF
 
 " LSP config (the mappings used in the default file don't quite work right)
@@ -51,3 +62,4 @@ nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 
 autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 1000)
+autocmd BufWritePre *.tf lua vim.lsp.buf.formatting()
