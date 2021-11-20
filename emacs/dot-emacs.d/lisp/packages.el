@@ -40,32 +40,28 @@
   :config (default-text-scale-mode))
 
 ;; https://github.com/Silex/docker.el
-(use-package docker
-  :ensure t)
+;; (use-package docker
+;;   :ensure t)
 
 ;; https://github.com/spotify/dockerfile-mode
 (use-package dockerfile-mode
   :ensure t)
 
 ;; https://github.com/meqif/docker-compose-mode
-(use-package docker-compose-mode
-  :ensure t)
+;; (use-package docker-compose-mode
+;;   :ensure t)
 
-;; https://github.com/seagle0128/doom-modeline
-;; Post-install:
-;; M-x all-the-icons-install-fonts
-(use-package doom-modeline
-  :ensure t
-  :init (doom-modeline-mode 1)
-  :config
-  (setq doom-modeline-github t)
-  (setq doom-modeline-github-interval (* 15 30)))
-
-;; https://github.com/hlissner/emacs-doom-themes
-(use-package doom-themes
+;; https://github.com/bbatsov/solarized-emacs
+(use-package solarized-theme
   :ensure t
   :config
-  (load-theme 'doom-tomorrow-night t))
+  (load-theme 'solarized-light t))
+
+;; https://gitlab.com/jessieh/mood-line
+(use-package mood-line
+  :ensure t
+  :config
+  (mood-line-mode))
 
 ;; https://github.com/purcell/exec-path-from-shell
 (use-package exec-path-from-shell
@@ -91,9 +87,9 @@
   :pin melpa-stable)
 
 ;; https://github.com/chrisbarrett/kubernetes-el
-(use-package kubernetes
-  :ensure t
-  :commands (kubernetes-overview))
+;; (use-package kubernetes
+;;   :ensure t
+;;   :commands (kubernetes-overview))
 
 ;; https://magit.vc/
 (use-package magit
@@ -164,11 +160,11 @@
 ;; TODO: vterm-toggle
 
 ;; https://github.com/justbur/emacs-which-key/
-(use-package which-key
-  :ensure t
-  :config
-  (which-key-mode)
-  (which-key-setup-side-window-right))
+;; (use-package which-key
+;;   :ensure t
+;;   :config
+;;   (which-key-mode)
+;;   (which-key-setup-side-window-right))
 
 ;; https://github.com/yaml/yaml-mode
 (use-package yaml-mode

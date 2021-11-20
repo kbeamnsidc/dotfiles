@@ -22,8 +22,12 @@
 
 (if (display-graphic-p)
     (progn
-      (set-frame-font "Hack-12")
-      (set-frame-size (selected-frame) 120 40)))
+      ;; (set-frame-font "Hack Nerd Font-12")
+      ;; (set-frame-font "Fira Code-12")
+      ;; (set-frame-font "Fira Mono-12")
+      (set-frame-font "Roboto Mono-12")
+      ;; TODO: Why do I need to add 1 to each dimension?
+      (set-frame-size (selected-frame) 90 56)))
 
 (setq uniquify-buffer-name-style 'forward)
 (when window-system
@@ -52,11 +56,11 @@
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (windmove-default-keybindings)
 
-(add-hook 'prog-mode-hook
-	  (lambda ()
-	    (set (make-local-variable 'comment-auto-fill-only-comments) t)
-	    (auto-fill-mode t)
-	    (add-hook 'before-save-hook 'delete-trailing-whitespace)))
+;; (add-hook 'prog-mode-hook
+;; 	  (lambda ()
+;; 	    (set (make-local-variable 'comment-auto-fill-only-comments) t)
+;; 	    (auto-fill-mode t)
+;; 	    (add-hook 'before-save-hook 'delete-trailing-whitespace)))
 
 (use-package no-littering
   :ensure t)
