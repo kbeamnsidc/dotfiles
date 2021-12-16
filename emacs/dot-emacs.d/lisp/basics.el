@@ -22,9 +22,6 @@
 
 (if (display-graphic-p)
     (progn
-      ;; (set-frame-font "Hack Nerd Font-12")
-      ;; (set-frame-font "Fira Code-12")
-      ;; (set-frame-font "Fira Mono-12")
       (set-frame-font "Roboto Mono-12")
       ;; TODO: Why do I need to add 1 to each dimension?
       (set-frame-size (selected-frame) 90 56)))

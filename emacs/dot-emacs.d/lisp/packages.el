@@ -55,13 +55,13 @@
 (use-package solarized-theme
   :ensure t
   :config
-  (load-theme 'solarized-light t))
+  (load-theme 'solarized-light-high-contrast t))
 
 ;; https://gitlab.com/jessieh/mood-line
-(use-package mood-line
-  :ensure t
-  :config
-  (mood-line-mode))
+;; (use-package mood-line
+;;   :ensure t
+;;   :config
+;;   (mood-line-mode))
 
 ;; https://github.com/purcell/exec-path-from-shell
 (use-package exec-path-from-shell

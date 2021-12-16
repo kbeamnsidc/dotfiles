@@ -12,14 +12,6 @@
 	    (add-hook 'before-save-hook 'delete-trailing-whitespace)))
 
 ;; ----------------------------------------------------------
-;; Haskell
-;; ----------------------------------------------------------
-;; https://github.com/haskell/haskell-mode
-(use-package haskell-mode
-  :ensure t
-  :hook ((haskell-mode . interactive-haskell-mode)))
-
-;; ----------------------------------------------------------
 ;; JavaScript & TypeScript
 ;; ----------------------------------------------------------
 ;; https://github.com/codesuki/add-node-modules-path
