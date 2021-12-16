@@ -60,6 +60,9 @@
 ;; (use-package jupyter
 ;;   :ensure t)
 
+;; Setup LSP
+(require 'lsp-lm)
+
 (provide 'dev)
 
 ;;; dev-lsp.el ends here
