@@ -10,15 +10,15 @@
   (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l)))
 
 ;; https://company-mode.github.io/
-(use-package company
-  :ensure t
-  :pin melpa-stable
-  :init (add-hook 'after-init-hook 'global-company-mode)
-  :config
-  (setq company-tooltip-idle-delay 0)
-  (setq company-idle-delay 0)
-  (setq company-tooltip-align-annotations t)
-  (global-set-key (kbd "<C-tab>") 'company-complete))
+;; (use-package company
+;;   :ensure t
+;;   :pin melpa-stable
+;;   :init (add-hook 'after-init-hook 'global-company-mode)
+;;   :config
+;;   (setq company-tooltip-idle-delay 0)
+;;   (setq company-idle-delay 0)
+;;   (setq company-tooltip-align-annotations t)
+;;   (global-set-key (kbd "<C-tab>") 'company-complete))
 
 ;; https://github.com/bbatsov/crux
 (use-package crux
@@ -27,10 +27,10 @@
          ("M-n" . crux-smart-open-line)))
 
 ;; https://github.com/Wilfred/deadgrep
-(use-package deadgrep
-  :ensure t
-  :bind
-  ("C-c r" . deadgrep))
+;; (use-package deadgrep
+;;   :ensure t
+;;   :bind
+;;   ("C-c r" . deadgrep))
 
 ;; https://github.com/purcell/default-text-scale
 ;; C-M-= Increase
@@ -44,8 +44,8 @@
 ;;   :ensure t)
 
 ;; https://github.com/spotify/dockerfile-mode
-(use-package dockerfile-mode
-  :ensure t)
+;; (use-package dockerfile-mode
+;;   :ensure t)
 
 ;; https://github.com/meqif/docker-compose-mode
 ;; (use-package docker-compose-mode
@@ -72,19 +72,19 @@
   (exec-path-from-shell-initialize))
 
 ;; http://www.flycheck.org/en/latest/
-(use-package flycheck
-  :ensure t)
+;; (use-package flycheck
+;;   :ensure t)
 
 ;; https://github.com/bling/fzf.el
-(use-package fzf
-  :ensure t
-  :bind
-  ("C-c f" . fzf))
+;; (use-package fzf
+;;   :ensure t
+;;   :bind
+;;   ("C-c f" . fzf))
 
 ;; https://gitlab.com/pidu/git-timemachine
-(use-package git-timemachine
-  :ensure t
-  :pin melpa-stable)
+;; (use-package git-timemachine
+;;   :ensure t
+;;   :pin melpa-stable)
 
 ;; https://github.com/chrisbarrett/kubernetes-el
 ;; (use-package kubernetes
@@ -123,28 +123,28 @@
 ;; TODO: org, org-babel, org-restclient
 
 ;; https://github.com/bbatsov/projectile
-(use-package projectile
-  :ensure t
-  :pin melpa-stable
-  :config
-  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-  (projectile-mode +1))
+;; (use-package projectile
+;;   :ensure t
+;;   :pin melpa-stable
+;;   :config
+;;   (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+;;   (projectile-mode +1))
 
 ;; https://github.com/pashky/restclient.el
-(use-package restclient
-  :ensure t)
+;; (use-package restclient
+;;   :ensure t)
 
 ;; https://github.com/Fuco1/smartparens
-(use-package smartparens
-  :ensure t
-  :pin melpa-stable
-  :config
-  (require 'smartparens-config)
-  (show-paren-mode t))
+;; (use-package smartparens
+;;   :ensure t
+;;   :pin melpa-stable
+;;   :config
+;;   (require 'smartparens-config)
+;;   (show-paren-mode t))
 
 ;; https://github.com/TxGVNN/terraform-doc
-(use-package terraform-doc
-  :ensure t)
+;; (use-package terraform-doc
+;;   :ensure t)
 
 ;; https://github.com/emacsorphanage/terraform-mode
 (use-package terraform-mode

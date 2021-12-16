@@ -15,14 +15,14 @@
 ;; JavaScript & TypeScript
 ;; ----------------------------------------------------------
 ;; https://github.com/codesuki/add-node-modules-path
-(use-package add-node-modules-path
-  :ensure t
-  :pin melpa-stable
-  :hook (js-mode typescript-mode))
+;; (use-package add-node-modules-path
+;;   :ensure t
+;;   :pin melpa-stable
+;;   :hook (js-mode typescript-mode))
 
 ;; https://github.com/emacs-typescript/typescript.el
-(use-package typescript-mode
-  :ensure t)
+;; (use-package typescript-mode
+;;   :ensure t)
 
 ;; https://github.com/rymndhng/jest-test-mode
 ;; (use-package jest-test-mode
@@ -37,8 +37,8 @@
 ;; Python
 ;; ----------------------------------------------------------
 ;; Built-in python mode
-(setq python-shell-interpreter "ipython"
-      python-shell-interpreter-args "-i")
+;; (setq python-shell-interpreter "ipython"
+;;       python-shell-interpreter-args "-i")
 
 ;; https://github.com/galaunay/poetry.el
 ;; (use-package poetry
