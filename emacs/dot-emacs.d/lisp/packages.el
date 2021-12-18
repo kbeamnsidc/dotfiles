@@ -3,11 +3,11 @@
 ;;; Code:
 
 ;; https://github.com/abo-abo/ace-window
-(use-package ace-window
-  :ensure t
-  :init
-  (bind-key "M-o" 'ace-window)
-  (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l)))
+;; (use-package ace-window
+;;   :ensure t
+;;   :init
+;;   (bind-key "M-o" 'ace-window)
+;;   (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l)))
 
 ;; https://company-mode.github.io/
 ;; (use-package company
@@ -32,12 +32,24 @@
 ;;   :bind
 ;;   ("C-c r" . deadgrep))
 
+;; https://github.com/emacs-dashboard/emacs-dashboard
+;; (use-package dashboard
+;;   :ensure t
+;;   :config
+;;   (dashboard-setup-startup-hook)
+;;   (setq dashboard-set-init-info t)
+;;   (setq dashboard-items '((recents  . 5)
+;;                         (bookmarks . 5)
+;;                         (projects . 5)
+;;                         (agenda . 5)
+;;                         (registers . 5))))
+
 ;; https://github.com/purcell/default-text-scale
 ;; C-M-= Increase
 ;; C-M-- Decrease
-(use-package default-text-scale
-  :ensure t
-  :config (default-text-scale-mode))
+;; (use-package default-text-scale
+;;   :ensure t
+;;   :config (default-text-scale-mode))
 
 ;; https://github.com/Silex/docker.el
 ;; (use-package docker
@@ -55,7 +67,12 @@
 (use-package solarized-theme
   :ensure t
   :config
-  (load-theme 'solarized-light-high-contrast t))
+  (load-theme 'solarized-light t)
+  (setq solarized-use-less-bold t))
+
+(use-package simple-modeline
+  :ensure t
+  :hook (after-init . simple-modeline-mode))
 
 ;; https://gitlab.com/jessieh/mood-line
 ;; (use-package mood-line
@@ -120,6 +137,11 @@
          ("\\.markdown\\'" . markdown-mode))
   :init (setq markdown-command "pandoc"))
 
+(use-package no-littering
+  :ensure t
+  :config
+  (setq custom-file (no-littering-expand-etc-file-name "custom.el")))
+
 ;; TODO: org, org-babel, org-restclient
 
 ;; https://github.com/bbatsov/projectile
@@ -147,15 +169,15 @@
 ;;   :ensure t)
 
 ;; https://github.com/emacsorphanage/terraform-mode
-(use-package terraform-mode
-  :ensure t)
+;; (use-package terraform-mode
+;;   :ensure t)
 
 ;; https://github.com/akermu/emacs-libvterm
 (use-package vterm
   :ensure t
   :bind ("C-c t" . vterm)
   :config
-  (setq vterm-max-scrollback (* 32 1024)))
+  (setq vterm-max-scrollback (* 8 1024)))
 
 ;; TODO: vterm-toggle
 
@@ -167,8 +189,8 @@
 ;;   (which-key-setup-side-window-right))
 
 ;; https://github.com/yaml/yaml-mode
-(use-package yaml-mode
-  :ensure t)
+;; (use-package yaml-mode
+;;   :ensure t)
 
 (provide 'packages)
 

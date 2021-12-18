@@ -3,7 +3,7 @@
 ;;; Code:
 
 ;; Temporarily increase size of GC threshold to speedup initialization.
-(setq gc-cons-threshold (* 128 1024 1024))
+(setq gc-cons-threshold (* 512 1024 1024))
 
 ;; Bootstrap everything with package
 (require 'package)
@@ -20,10 +20,9 @@
   (require 'use-package))
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
-(require 'basics)
-(require 'packages)
-(require 'dev)
+(require 'min)
+;; (require 'max)
 
-(setq gc-cons-threshold (* 32 1024 1024))
+(setq gc-cons-threshold (* 2 1024 1024))
 
 ;;; init.el ends here

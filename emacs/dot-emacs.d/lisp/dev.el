@@ -61,7 +61,7 @@
 ;;   :ensure t)
 
 ;; Setup LSP
-(require 'lsp-lm)
+(require 'lsp-eglot)
 
 (provide 'dev)
 
