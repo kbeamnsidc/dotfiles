@@ -5,6 +5,8 @@
 # Many settings taken from 'Sensible Bash' by Mattia Tezzele:
 # https://mrzool.cc/writing/sensible-bash/
 
+export PS1="\n[\u@\h] [\w] \t\n\\$ \[$(tput sgr0)\]"
+
 set -o vi
 
 # ---------
@@ -141,6 +143,11 @@ PATH="$HOME/.cargo/bin:$PATH"
 # Terraform
 # ---------
 complete -C /usr/bin/terraform terraform
+
+# ---------
+# Julia
+# ---------
+export PATH="$PATH:$HOME/tools/julia/julia-1.7.1/bin"
 
 # ---------
 # Activate pyenv
