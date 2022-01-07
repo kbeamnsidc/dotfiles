@@ -1,4 +1,6 @@
 require('basics')
+vim.g.onedark_italic_comment = false
+require('onedark').setup()
 require('telescope-config')
 require('lualine').setup {
   options = {
@@ -25,6 +27,7 @@ require'nvim-treesitter.configs'.setup {
 
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
+  use 'navarasu/onedark.nvim'
   use 'nvim-treesitter/nvim-treesitter' 
   use 'tpope/vim-commentary'
   use 'ThePrimeagen/git-worktree.nvim'
