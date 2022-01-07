@@ -1,8 +1,2 @@
-vim.cmd [[
-try
-  colorscheme tomorrow
-catch /^Vim\%((\a\+)\)\=:E185/
-  colorscheme default
-  set background=dark
-endtry
-]]
+vim.g.onedark_italic_comment = false
+require('onedark').setup()

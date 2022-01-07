@@ -1,3 +1,5 @@
+vim.g.mapleader = " "
+
 local options = {
   backup = false,                          -- creates a backup file
   clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
@@ -5,7 +7,7 @@ local options = {
   completeopt = { "menuone", "noselect" }, -- mostly just for cmp
   conceallevel = 0,                        -- so that `` is visible in markdown files
   fileencoding = "utf-8",                  -- the encoding written to a file
-  hlsearch = true,                         -- highlight all matches on previous search pattern
+  hlsearch = false,                        -- highlight all matches on previous search pattern
   ignorecase = true,                       -- ignore case in search patterns
   mouse = "a",                             -- allow the mouse to be used in neovim
   pumheight = 10,                          -- pop up menu height
@@ -24,7 +26,7 @@ local options = {
   expandtab = true,                        -- convert tabs to spaces
   shiftwidth = 2,                          -- the number of spaces inserted for each indentation
   tabstop = 2,                             -- insert 2 spaces for a tab
-  cursorline = false,                       -- highlight the current line
+  cursorline = false,                      -- highlight the current line
   number = true,                           -- set numbered lines
   relativenumber = false,                  -- set relative numbered lines
   numberwidth = 4,                         -- set number column width to 2 {default 4}
@@ -40,6 +42,10 @@ vim.opt.shortmess:append "c"
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
+
+vim.g["netrw_banner"] = 0
+vim.g["netrw_liststyle"] = 3
+vim.g["netrw_winsize"] = 25
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
