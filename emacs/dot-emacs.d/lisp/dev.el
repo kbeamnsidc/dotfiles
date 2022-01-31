@@ -49,14 +49,6 @@
   (require 'dap-python))
 
 ;; ----------------------------------------------------------
-;; Haskell
-;; ----------------------------------------------------------
-;; https://github.com/haskell/haskell-mode
-(use-package haskell-mode
-  :ensure t
-  :hook ((haskell-mode . interactive-haskell-mode)))
-
-;; ----------------------------------------------------------
 ;; JavaScript & TypeScript
 ;; ----------------------------------------------------------
 ;; https://github.com/codesuki/add-node-modules-path
@@ -67,6 +59,13 @@
 
 ;; https://github.com/emacs-typescript/typescript.el
 (use-package typescript-mode
+  :ensure t)
+
+;; ----------------------------------------------------------
+;; Julia
+;; ----------------------------------------------------------
+;; https://github.com/JuliaEditorSupport/julia-emacs
+(use-package julia-mode
   :ensure t)
 
 ;; ----------------------------------------------------------
@@ -94,6 +93,16 @@
 
 ;; https://github.com/nnicandro/emacs-jupyter
 (use-package jupyter
+  :ensure t)
+
+;; ----------------------------------------------------------
+;; Scheme
+;; ----------------------------------------------------------
+;; https://www.nongnu.org/geiser/
+(use-package geiser-mit
+  :ensure t)
+
+(use-package geiser-racket
   :ensure t)
 
 (provide 'dev)
