@@ -5,10 +5,6 @@
 # Many settings taken from 'Sensible Bash' by Mattia Tezzele:
 # https://mrzool.cc/writing/sensible-bash/
 
-export PS1="\n[\u@\h] [\w] \t\n\\$ \[$(tput sgr0)\]"
-
-set -o vi
-
 # ---------
 # Autocompletion
 # ---------
@@ -154,5 +150,11 @@ export PATH="$PATH:$HOME/tools/julia/julia-1.7.1/bin"
 # ---------
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# ---------
+# Starship prompt
+# https://starship.rs/
+# ---------
+eval "$(starship init bash)"
 
 export PATH
