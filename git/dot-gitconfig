@@ -22,22 +22,6 @@
 	required = true
 [credential]
 	helper = store
-[pager]
-    diff = delta
-    log = delta
-    reflog = delta
-    show = delta
-[delta]
-    plus-style = "syntax #012800"
-    minus-style = "syntax #340001"
-    syntax-theme = Monokai Extended
-    navigate = true
-[interactive]
-    diffFilter = delta --color-only
-[include]
-    path = ~/tools/delta/themes.gitconfig
-[delta]
-   features = eigenbeam
 [init]
 	defaultBranch = main
 	templateDir = /home/kbeam/.git-templates/git-secrets
