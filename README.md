@@ -19,6 +19,11 @@ $ make
 
 ## Install Linux Tools
 
+* [fzf](https://github.com/junegunn/fzf)
+* [ripgrep](https://github.com/BurntSushi/ripgrep)
+* [neovim]()
+* [tmux]()
+
 * [Rust](https://www.rust-lang.org/tools/install)
 * [bat](https://github.com/sharkdp/bat)
 * [bat-extras](https://github.com/eth-p/bat-extras)
@@ -27,9 +32,5 @@ $ make
 * [entr]()
 * [exa](https://github.com/ogham/exa)
 * [fd-find](https://github.com/sharkdp/fd)
-* [fzf](https://github.com/junegunn/fzf)
-* [neovim]()
-* [ripgrep](https://github.com/BurntSushi/ripgrep)
 * [shfmt](https://github.com/mvdan/sh)
-* [tmux]()
 * []()
