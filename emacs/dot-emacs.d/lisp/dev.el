@@ -5,48 +5,48 @@
 ;; ----------------------------------------------------------
 ;; LSP - lsp-mode
 ;; ----------------------------------------------------------
-(use-package lsp-mode
-  :ensure t
-  :hook ((python-mode . lsp)
-         (lsp-mode . lsp-enable-which-key-integration))
-  :commands lsp
-  :config
-  (setq
-   read-process-output-max (* 1024 1024)
-   lsp-idle-delay 0.500
-   lsp-pyls-plugins-pydocstyle-enabled t
-   lsp-pyls-plugins-yapf-enabled t
-   lsp-pyls-plugins-flake8-enabled t
-   lsp-pyls-plugins-pycodestyle-enabled nil
-   lsp-pyls-plugins-pyflakes-enabled nil))
-(setq lsp-keymap-prefix "C-c l")
+;; (use-package lsp-mode
+;;   :ensure t
+;;   :hook ((python-mode . lsp)
+;;          (lsp-mode . lsp-enable-which-key-integration))
+;;   :commands lsp
+;;   :config
+;;   (setq
+;;    read-process-output-max (* 1024 1024)
+;;    lsp-idle-delay 0.500
+;;    lsp-pyls-plugins-pydocstyle-enabled t
+;;    lsp-pyls-plugins-yapf-enabled t
+;;    lsp-pyls-plugins-flake8-enabled t
+;;    lsp-pyls-plugins-pycodestyle-enabled nil
+;;    lsp-pyls-plugins-pyflakes-enabled nil))
+;; (setq lsp-keymap-prefix "C-c l")
 
-(use-package lsp-ui
-  :ensure t
-  :commands lsp-ui-mode
-  :config
-  (setq
-   lsp-ui-sideline-enable t
-   lsp-ui-sideline-show-diagnostics t
-   lsp-ui-sideline-show-hover t
-   lsp-ui-sideline-show-code-actions t
-   ;; ----------------------------------------
-   lsp-ui-peek-enable t
-   lsp-ui-peek-list-width 60
-   lsp-ui-peek-peek-height 25
-   ;; ----------------------------------------
-   lsp-ui-doc-enable t
-   lsp-ui-doc-use-childframe t
-   lsp-ui-doc-position 'bottom
-   ))
+;; (use-package lsp-ui
+;;   :ensure t
+;;   :commands lsp-ui-mode
+;;   :config
+;;   (setq
+;;    lsp-ui-sideline-enable t
+;;    lsp-ui-sideline-show-diagnostics t
+;;    lsp-ui-sideline-show-hover t
+;;    lsp-ui-sideline-show-code-actions t
+;;    ;; ----------------------------------------
+;;    lsp-ui-peek-enable t
+;;    lsp-ui-peek-list-width 60
+;;    lsp-ui-peek-peek-height 25
+;;    ;; ----------------------------------------
+;;    lsp-ui-doc-enable t
+;;    lsp-ui-doc-use-childframe t
+;;    lsp-ui-doc-position 'bottom
+;;    ))
 
-(use-package dap-mode
-  :ensure t
-  :config
-  (dap-ui-mode 1)
-  (dap-tooltip-mode 1)
-  (setq dap-python-debugger 'debugpy)
-  (require 'dap-python))
+;; (use-package dap-mode
+;;   :ensure t
+;;   :config
+;;   (dap-ui-mode 1)
+;;   (dap-tooltip-mode 1)
+;;   (setq dap-python-debugger 'debugpy)
+;;   (require 'dap-python))
 
 ;; ----------------------------------------------------------
 ;; JavaScript & TypeScript
@@ -71,13 +71,14 @@
 ;; ----------------------------------------------------------
 ;; Python
 ;; ----------------------------------------------------------
-;; Built-in python mode
-(setq python-shell-interpreter "ipython"
-      python-shell-interpreter-args "-i")
+;; Use built-in python mode
+
+;; (setq python-shell-interpreter "ipython"
+;;       python-shell-interpreter-args "-i")
 
 ;; https://github.com/galaunay/poetry.el
-(use-package poetry
-  :ensure t)
+;; (use-package poetry
+;;   :ensure t)
 
 ;; https://github.com/jorgenschaefer/pyvenv
 (use-package pyvenv
@@ -86,14 +87,14 @@
   (pyvenv-mode 1))
 
 ;; https://github.com/wbolster/emacs-python-pytest
-(use-package python-pytest
-  :ensure t
-  :commands (python-pytest-dispatch)
-  :bind ("C-c u" . python-pytest-dispatch))
+;; (use-package python-pytest
+;;   :ensure t
+;;   :commands (python-pytest-dispatch)
+;;   :bind ("C-c u" . python-pytest-dispatch))
 
 ;; https://github.com/nnicandro/emacs-jupyter
-(use-package jupyter
-  :ensure t)
+;; (use-package jupyter
+;;   :ensure t)
 
 ;; ----------------------------------------------------------
 ;; Scheme

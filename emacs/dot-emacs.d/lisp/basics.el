@@ -22,7 +22,7 @@
 
 (if (display-graphic-p)
     (progn
-      (set-frame-font "Hack Nerd Font 14")
+      (set-frame-font "Hack 14")
       (set-frame-size (selected-frame) 90 50)))
 
 (setq uniquify-buffer-name-style 'forward)
