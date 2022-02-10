@@ -62,7 +62,7 @@
 (use-package doom-themes
   :ensure t
   :config
-  (load-theme 'doom-sourcerer t))
+  (load-theme 'doom-tomorrow-night t))
 
 ;; http://www.flycheck.org/en/latest/
 ;; (use-package flycheck
