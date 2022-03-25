@@ -8,6 +8,7 @@
 [core]
 	autocrlf = input
 	safecrlf = false
+        pager = delta
 [alias]
         l = log --name-only --oneline --graph
         st = status
@@ -33,3 +34,15 @@
 	patterns = (\"|')?(AWS|aws|Aws)?_?(ACCOUNT|account|Account)_?(ID|id|Id)?(\"|')?\\s*(:|=>|=)\\s*(\"|')?[0-9]{4}\\-?[0-9]{4}\\-?[0-9]{4}(\"|')?
 	allowed = AKIAIOSFODNN7EXAMPLE
 	allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+[github]
+	user = kbeamnsidc
+[bitbucket "api.bitbucket.org/2.0"]
+	user = kbeamnsidc
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    side-by-side = true
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default

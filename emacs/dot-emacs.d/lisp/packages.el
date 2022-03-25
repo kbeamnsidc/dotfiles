@@ -20,10 +20,23 @@
   (setq company-tooltip-align-annotations t)
   (global-set-key (kbd "<C-tab>") 'company-complete))
 
-;; (use-package crux
-;;   :ensure t
-;;   :bind (("M-p" . crux-smart-open-line-above)
-;;          ("M-n" . crux-smart-open-line)))
+(use-package crux
+  :ensure t
+  :bind (("M-p" . crux-smart-open-line-above)
+         ("M-n" . crux-smart-open-line)))
+
+;; https://github.com/emacs-dashboard/emacs-dashboard
+(use-package dashboard
+  :ensure t
+  :config
+  (setq dashboard-projects-backend 'projectile)
+  (setq dashboard-items '((projects . 5)
+                          (bookmarks . 5)
+                          (agenda . 5)
+                          (recents  . 5)
+                          (registers . 5)))
+  (setq dashboard-startup-banner 'logo)
+  (dashboard-setup-startup-hook))
 
 ;; https://github.com/purcell/default-text-scale
 (use-package default-text-scale
@@ -58,14 +71,25 @@
   :config
   (load-theme 'doom-tomorrow-night t))
 
+;; https://github.com/purcell/exec-path-from-shell
+(use-package exec-path-from-shell
+  :ensure t
+  :config
+  (exec-path-from-shell-initialize))
+
 ;; http://www.flycheck.org/en/latest/
 (use-package flycheck
   :ensure t)
 
+(use-package forge
+  :ensure t
+  :pin melpa
+  :after magit)
+
 ;; https://gitlab.com/pidu/git-timemachine
 (use-package git-timemachine
   :ensure t
-  :pin melpa-stable)
+  :pin melpa)
 
 ;; https://github.com/chrisbarrett/kubernetes-el
 ;; (use-package kubernetes
@@ -75,12 +99,22 @@
 ;; https://magit.vc/
 (use-package magit
   :ensure t
-  :pin melpa-stable
+  :pin melpa
   :bind
   ("C-c g" . magit-status)
   :config
   (setq magit-last-seen-setup-instructions "1.4.0")
   (setq magit-push-always-verify nil))
+
+;; https://github.com/dandavison/magit-delta
+(use-package magit-delta
+  :ensure t
+  ;; :after magit
+  :hook (magit-mode . magit-delta-mode))
+  ;; :config
+  ;; (setq magit-delta-delta-args (cons "-s" magit-delta-delta-args)))
+
+;; xyzzy
 
 ;; https://github.com/magnars/multiple-cursors.el
 (use-package multiple-cursors
@@ -120,8 +154,8 @@
   (show-paren-mode t))
 
 ;; https://github.com/TxGVNN/terraform-doc
-;; (use-package terraform-doc
-;;   :ensure t)
+(use-package terraform-doc
+  :ensure t)
 
 ;; https://github.com/emacsorphanage/terraform-mode
 (use-package terraform-mode
