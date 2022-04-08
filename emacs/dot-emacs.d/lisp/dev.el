@@ -15,6 +15,7 @@
   :config
   (setq
    read-process-output-max (* 1024 1024)
+   lsp-enable-snippet nil
    lsp-idle-delay 0.500
    lsp-pyls-plugins-pydocstyle-enabled t
    lsp-pyls-plugins-yapf-enabled t
@@ -46,12 +47,15 @@
 
 (use-package dap-mode
   :ensure t
+  :commands dap-debug
   :config
   (dap-auto-configure-mode 1)
   ;; (dap-ui-mode 1)
   ;; (dap-tooltip-mode 1)
+  (require 'dap-python)
   (setq dap-python-debugger 'debugpy)
-  (require 'dap-python))
+  (require 'dap-node)
+  (dap-node-setup))
 
 ;; ----------------------------------------------------------
 ;; JavaScript & TypeScript
