@@ -9,7 +9,9 @@
   :ensure t
   :hook ((python-mode . lsp)
          (lsp-mode . lsp-enable-which-key-integration))
-  :commands lsp
+  :commands (lsp lsp-deferred)
+  :init
+  (setq lsp-keymap-prefix "C-c l")
   :config
   (setq
    read-process-output-max (* 1024 1024)
@@ -19,7 +21,6 @@
    lsp-pyls-plugins-flake8-enabled t
    lsp-pyls-plugins-pycodestyle-enabled nil
    lsp-pyls-plugins-pyflakes-enabled nil))
-(setq lsp-keymap-prefix "C-c l")
 
 (use-package lsp-ui
   :ensure t
@@ -37,8 +38,11 @@
    ;; ----------------------------------------
    lsp-ui-doc-enable t
    lsp-ui-doc-use-childframe t
-   lsp-ui-doc-position 'bottom
-   ))
+   lsp-ui-doc-show-with-cursor t))
+
+(use-package lsp-treemacs
+  :ensure t
+  :after lsp)
 
 (use-package dap-mode
   :ensure t
@@ -60,7 +64,11 @@
 
 ;; https://github.com/emacs-typescript/typescript.el
 (use-package typescript-mode
-  :ensure t)
+  :ensure t
+  :mode "\\.ts\\'"
+  :hook (typescript-mode . lsp-deferred)
+  :config
+  (setq typescript-indent-level 2))
 
 ;; ----------------------------------------------------------
 ;; Julia

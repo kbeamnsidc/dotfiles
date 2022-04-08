@@ -12,13 +12,18 @@
 ;; https://company-mode.github.io/
 (use-package company
   :ensure t
-  :pin melpa-stable
-  :init (add-hook 'after-init-hook 'global-company-mode)
-  :config
-  (setq company-tooltip-idle-delay 0)
-  (setq company-idle-delay 0)
-  (setq company-tooltip-align-annotations t)
-  (global-set-key (kbd "<C-tab>") 'company-complete))
+  :pin melpa
+  :hook (prog-mode . company-mode)
+  ;; :init (add-hook 'after-init-hook 'global-company-mode)
+  :custom
+  (company-minimum-prefix-length 1)
+  (setq company-idle-delay 0.0)
+  (setq company-tooltip-idle-delay 0.0)
+  (setq company-tooltip-align-annotations t))
+
+(use-package company-box
+  :ensure t
+  :hook (company-mode . company-box-mode))
 
 (use-package crux
   :ensure t
@@ -171,11 +176,11 @@
 ;; TODO: vterm-toggle
 
 ;; https://github.com/justbur/emacs-which-key/
-;; (use-package which-key
-;;   :ensure t
-;;   :config
-;;   (which-key-mode)
-;;   (which-key-setup-side-window-right))
+(use-package which-key
+  :ensure t
+  :config
+  (which-key-mode)
+  (which-key-setup-side-window-right))
 
 ;; https://github.com/yaml/yaml-mode
 (use-package yaml-mode
