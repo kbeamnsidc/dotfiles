@@ -142,8 +142,8 @@
   (projectile-mode +1))
 
 ;; https://github.com/pashky/restclient.el
-;; (use-package restclient
-;;   :ensure t)
+(use-package restclient
+  :ensure t)
 
 ;; https://github.com/Fuco1/smartparens
 (use-package smartparens
