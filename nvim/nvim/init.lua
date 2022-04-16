@@ -89,19 +89,12 @@ vim.api.nvim_set_keymap("", "<Space>", "<Nop>", { noremap = true, silent = true 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-require('telescope').setup {
-  defaults = {
-    mappings = {
-      i = {
-      },
-    },
-  },
-}
+require('telescope').setup { }
 
-nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
-nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
-nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
-nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+vim.cmd "nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>"
+vim.cmd "nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>"
+vim.cmd "nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>"
+vim.cmd "nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>"
 
 -- Modes
 --   normal_mode = "n",
