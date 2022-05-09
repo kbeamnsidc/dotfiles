@@ -22,6 +22,7 @@ require('packer').startup(function(use)
 
   use 'christoomey/vim-tmux-navigator'
   use 'glepnir/dashboard-nvim'
+  use 'nvim-treesitter/nvim-treesitter'
   use {
     'nvim-telescope/telescope.nvim',
     requires = { 'nvim-lua/plenary.nvim' }
@@ -104,7 +105,10 @@ vim.cmd "colorscheme tokyonight"
 
 require('lualine').setup()
 
-require("nvim-lsp-installer").setup {}
+require("nvim-lsp-installer").setup ({
+  ensure_installed = { 'bashls', 'dockerls', 'fortls', 'jsonls', 'julials', 'remark_ls', 'pylsp', 'sumneko_lua', 'terraformls', 'tsserver', 'yamlls' },
+  automatic_installation = true,
+})
 
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -139,7 +143,7 @@ end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'asm_lsp', 'bashls', 'dockerls', 'fortls', 'jsonls', 'remark_ls', 'pylsp', 'sumneko_lua', 'terraformls', 'tsserver', 'yamlls' }
+local servers = { 'bashls', 'dockerls', 'fortls', 'jsonls', 'julials', 'remark_ls', 'pylsp', 'sumneko_lua', 'terraformls', 'tsserver', 'yamlls' }
 for _, lsp in pairs(servers) do
   require('lspconfig')[lsp].setup {
     on_attach = on_attach,
