@@ -49,26 +49,26 @@
   :config (default-text-scale-mode))
 
 ;; https://github.com/Silex/docker.el
-;; (use-package docker
-;;   :ensure t)
+(use-package docker
+  :ensure t)
 
 ;; https://github.com/spotify/dockerfile-mode
-;; (use-package dockerfile-mode
-;;   :ensure t)
+(use-package dockerfile-mode
+  :ensure t)
 
 ;; https://github.com/meqif/docker-compose-mode
-;; (use-package docker-compose-mode
-;;   :ensure t)
+(use-package docker-compose-mode
+  :ensure t)
 
 ;; https://github.com/seagle0128/doom-modeline
 ;; Post-install:
 ;; M-x all-the-icons-install-fonts
-;; (use-package doom-modeline
-;;   :ensure t
-;;   :init (doom-modeline-mode 1)
-;;   :config
-;;   (setq doom-modeline-github t)
-;;   (setq doom-modeline-github-interval (* 15 30)))
+(use-package doom-modeline
+  :ensure t
+  :init (doom-modeline-mode 1)
+  :config
+  (setq doom-modeline-github t)
+  (setq doom-modeline-github-interval (* 15 30)))
 
 ;; https://github.com/hlissner/emacs-doom-themes
 (use-package doom-themes
@@ -96,11 +96,6 @@
   :ensure t
   :pin melpa)
 
-;; https://github.com/chrisbarrett/kubernetes-el
-;; (use-package kubernetes
-;;   :ensure t
-;;   :commands (kubernetes-overview))
-
 ;; https://magit.vc/
 (use-package magit
   :ensure t
@@ -119,8 +114,6 @@
   ;; :config
   ;; (setq magit-delta-delta-args (cons "-s" magit-delta-delta-args)))
 
-;; xyzzy
-
 ;; https://github.com/magnars/multiple-cursors.el
 (use-package multiple-cursors
   :ensure t
@@ -136,7 +129,7 @@
   :pin melpa
   :mode "\\.md\\'")
 
-;; TODO: org, org-babel, org-restclient
+;; TODO: org, org-babel
 
 ;; https://github.com/bbatsov/projectile
 (use-package projectile
@@ -144,7 +137,9 @@
   :pin melpa-stable
   :config
   (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-  (projectile-mode +1))
+  (projectile-mode +1)
+  (setq projectile-switch-project-action #'projectile-dired)
+  (setq projectile-project-search-path '("~/projects/")))
 
 ;; https://github.com/pashky/restclient.el
 (use-package restclient
