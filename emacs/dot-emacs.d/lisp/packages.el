@@ -106,14 +106,6 @@
   (setq magit-last-seen-setup-instructions "1.4.0")
   (setq magit-push-always-verify nil))
 
-;; https://github.com/dandavison/magit-delta
-(use-package magit-delta
-  :ensure t
-  ;; :after magit
-  :hook (magit-mode . magit-delta-mode))
-  ;; :config
-  ;; (setq magit-delta-delta-args (cons "-s" magit-delta-delta-args)))
-
 ;; https://github.com/magnars/multiple-cursors.el
 (use-package multiple-cursors
   :ensure t

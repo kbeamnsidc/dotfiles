@@ -22,7 +22,7 @@
 
 (if (display-graphic-p)
     (progn
-      (set-frame-font "Hack 8")
+      (set-frame-font "Source Code Pro 12")
       (set-frame-size (selected-frame) 90 50)))
 
 (setq uniquify-buffer-name-style 'forward)
@@ -34,6 +34,7 @@
 (global-auto-revert-mode t)
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 
+(setq native-comp-async-report-warnings-errors nil)
 (setq create-lockfiles nil)
 (setq make-backup-files nil)
 (setq auto-save-default nil)
