@@ -8,7 +8,6 @@
 [core]
 	autocrlf = input
 	safecrlf = false
-        pager = delta
 [alias]
         l = log --name-only --oneline --graph
         st = status
@@ -38,10 +37,6 @@
 	user = kbeamnsidc
 [bitbucket "api.bitbucket.org/2.0"]
 	user = kbeamnsidc
-[interactive]
-    diffFilter = delta --color-only
-[delta]
-    side-by-side = true
 [merge]
     conflictstyle = diff3
 [diff]
